@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  background: #e5e6f0;
+  -webkit-font-smoothing: antialiased;
+} 
+
+body, input, button {
+  font-family: Roboto, Arial, Helvetica, sans-serif;
+}
+
+#app {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 30px;
+
+  display: flex;
+  flex-direction: row;
+  
+}
+
+#app main {
+  margin-left: 30px;
+}
+
+aside {
+  width: 320px;
+  height: 380px;
+  background: #fff;
+  box-shadow: 0 0 14px 0 rgba(0,0,0, 0.02);
+  border-radius: 2px;
+  padding: 30px 20px;
+}
+
+aside strong {
+  font-size: 20px;
+  text-align: center;
+  display: block;
+  color: #333;
+}
+
+aside form {
+  margin-top: 30px;
+}
+
+aside form .input-block label {
+  color: #acacac;
+  font-size: 14px;
+  font-weight: bold;
+  display: block;
+}
+
+aside form .input-block input {
+  width: 100%;
+  height: 32px;
+  font-size: 14px;
+  color: #666;
+  border: 0;
+  border-bottom: 1px solid #eee;
+}
+
+aside form .input-block + .input-block {
+  margin-top: 20px;
+}
+
+aside form .input-group {
+  margin-top: 20px;
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+aside form .input-group .input-block{
+  margin-top: 0;
+
+}
+
+aside form button[type=submit] {
+  width: 100%;
+  border: 0;
+  margin-top: 30px;
+  background: #7d40e7;
+  border-radius: 2px;
+  padding: 15px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.5s;
+}
+
+aside form button[type=submit]:hover {
+  background: #6931ca;
+}
+
+main {
+  flex: 1;
+}
+
+main ul {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  list-style: none;
+}
+
+li.dev-item {
+  background: #fff;
+  box-shadow: 0 0 14px 0 rgba(0,0,0, 0.02);
+  border-radius: 2px;
+  padding: 20px;
+}
+
+li.dev-item header {
+  display: flex;
+  align-items: center;
+}
+
+li.dev-item header img{
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+}
+
+li.dev-item header .user-info{
+  margin-left: 10px;
+}
+
+.user-info strong{
+  display: block;
+  font-size: 16px;
+  color: #333;
+}
+
+.user-info strong{
+  font-size: 13px;
+  color: #999;
+  margin-top: 2px;
+}
+
+li.dev-item p {
+  color: #666;
+  font-size: 14px;
+  line-height: 20px;
+  margin: 10px 0;
+}
+
+li.dev-item a {
+  color: #8e4dff;
+  text-decoration: none;
+}
+
+li.dev-item a:hover {
+  color: #7638e2;
+;
+}
+
+@media (max-width:1050px) {
+  main ul {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    list-style: none;
+  }
+}
+
+@media (max-width:700px) {
+  #app {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #app aside {
+    width: 100%;
+  }
+
+  #app main {
+    margin-top: 30px;
+    margin-left: 0;
+  }
+}
